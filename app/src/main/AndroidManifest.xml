@@ -54,5 +54,19 @@
         <activity android:name=".LupaPasswordActivity"
             android:exported="false"/>
 
+        <activity android:name=".SchoolActivity"
+            android:exported="false"/>
+
+        <activity android:name=".SejarahActivity"
+            android:exported="false"/>
+        <activity android:name=".TujuanActivity"
+            android:exported="false"/>
+        <activity android:name=".VisiMisiActivity"
+            android:exported="false"/>
+        <activity android:name=".SaranaActivity"
+            android:exported="false"/>
+        <activity android:name=".EkstrakurikulerActivity"
+            android:exported="false"/>
+
     </application>
 </manifest>

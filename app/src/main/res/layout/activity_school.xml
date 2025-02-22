@@ -9,12 +9,12 @@
     <!-- ScrollView untuk konten utama -->
     <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="0dp"
+        android:layout_height="wrap_content"
         android:fillViewport="true"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintBottom_toTopOf="@id/bottom_navigation">
 
-        <LinearLayout
+    <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical"
@@ -49,24 +49,23 @@
 
                 <TextView
                     android:id="@+id/tv_school_name"
-                    android:layout_width="192dp"
-                    android:layout_height="43dp"
-                    android:layout_marginTop="24dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
                     android:fontFamily="sans-serif-black"
-                    android:gravity="left"
-                    android:text="Sekolah Islam Terpadu ALMAWAR Kolaka"
-                    android:textAlignment="textEnd"
+                    android:gravity="center"
+                    android:text="Profil Sekolah"
+                    android:textAlignment="center"
                     android:textColor="@color/black"
-                    android:textSize="18sp"
+                    android:textSize="20sp"
                     android:textStyle="bold"
                     app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintHorizontal_bias="0.0"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toBottomOf="@id/tv_greeting" />
 
                 <TextView
-                    android:id="@+id/textView3"
-                    android:layout_width="0dp"
+                    android:id="@+id/tv_address"
+                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="10dp"
                     android:background="@drawable/location_background"
@@ -75,57 +74,98 @@
                     android:text="Jl. Pondok Pesantren No.10, Lakomato, Kec. Kolaka"
                     android:textAlignment="center"
                     android:textColor="@color/black"
-                    android:textSize="15sp"
+                    android:textSize="14sp"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toBottomOf="@id/tv_school_name" />
 
             </androidx.constraintlayout.widget.ConstraintLayout>
 
-            <!-- Content -->
+            <!-- Gambar Sekolah -->
             <ImageView
-                android:id="@+id/imageView5"
+                android:id="@+id/imageView_school"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="16dp"
                 android:adjustViewBounds="true"
                 app:srcCompat="@drawable/img_sekolah" />
 
-            <TextView
-                android:id="@+id/textView6"
+            <!-- Profil Sekolah -->
+
+            <!-- Menu Profil Sekolah -->
+            <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="16dp"
-                android:background="@drawable/background_visi"
-                android:gravity="center"
-                android:text="“UNGGUL DALAM IMTAQ, KOMPETITIF DALAM IPTEK DAN BERWAWASAN GLOBAL”"
-                android:textAlignment="center"
-                android:textColor="#FFFFFF"
-                android:textSize="16sp"
-                android:textStyle="bold"/>
+                android:orientation="vertical"
+                android:background="@color/white"
+                android:padding="8dp">
 
-            <ImageView
-                android:id="@+id/imageView6"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="16dp"
-                android:adjustViewBounds="true"
-                app:srcCompat="@drawable/alur_pendaftaran" />
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Profile Sekolah"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    android:gravity="center"
+                    android:textColor="@color/black" />
 
-            <Button
-                android:id="@+id/btnDaftar"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="16dp"
-                android:backgroundTint="@color/button_color"
-                android:fontFamily="sans-serif-black"
-                android:padding="16dp"
-                android:text="DAFTAR SEKARANG"
-                android:textColor="#FDFDFD"
-                android:textSize="18sp" />
+                <Button
+                    android:id="@+id/btn_sejarah"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:backgroundTint="@color/gray"
+                    android:text="Sejarah"
+                    android:textColor="@color/black"
+                    android:drawableEnd="@drawable/ic_arrow_right"
+                    android:padding="10dp"/>
 
+                <Button
+                    android:id="@+id/btn_tujuan"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:backgroundTint="@color/gray"
+                    android:text="Tujuan"
+                    android:textColor="@color/black"
+                    android:drawableEnd="@drawable/ic_arrow_right"
+                    android:padding="10dp"/>
+
+                <Button
+                    android:id="@+id/btn_visi_misi"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:backgroundTint="@color/gray"
+                    android:text="Visi & Misi"
+                    android:textColor="@color/black"
+                    android:drawableEnd="@drawable/ic_arrow_right"
+                    android:padding="10dp"/>
+
+                <Button
+                    android:id="@+id/btn_sarana"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:backgroundTint="@color/gray"
+                    android:text="Sarana & Prasarana"
+                    android:textColor="@color/black"
+                    android:drawableEnd="@drawable/ic_arrow_right"
+                    android:padding="10dp"/>
+
+                <Button
+                    android:id="@+id/btn_ekskul"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:backgroundTint="@color/gray"
+                    android:text="Ekstrakurikuler"
+                    android:textColor="@color/black"
+                    android:drawableEnd="@drawable/ic_arrow_right"
+                    android:padding="10dp"/>
+            </LinearLayout>
         </LinearLayout>
-
     </ScrollView>
 
     <!-- BOTTOM NAVIGATION BAR -->

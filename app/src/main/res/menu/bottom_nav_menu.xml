@@ -19,4 +19,14 @@
         android:id="@+id/akun"
         android:icon="@drawable/ic_akun"
         android:title="akun"/>
+
+    <item
+        android:id="@+id/nav_school"
+        android:icon="@drawable/ic_school"
+        android:title="School"/>
+
+    <item
+        android:id="@+id/nav_profile"
+        android:icon="@drawable/ic_profile"
+        android:title="Profile"/>
 </menu>

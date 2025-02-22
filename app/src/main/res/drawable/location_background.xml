@@ -1,0 +1,7 @@
+<shape xmlns:android="http://schemas.android.com/apk/res/android"
+    android:shape="rectangle">
+    <corners android:radius="16dp"/>  <!-- Membuat sudut melengkung -->
+    <solid android:color="#FFFFFFFF"/>  <!-- Ganti warna sesuai kebutuhan -->
+    <padding android:left="16dp" android:right="16dp" android:top="8dp" android:bottom="8dp"/>
+    <stroke android:width="2dp" android:color="#FF000000"/> <!-- Jika ingin ada border -->
+</shape>
