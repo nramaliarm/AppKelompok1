@@ -1,0 +1,58 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.appkelompok1">
+
+    <!-- Permissions -->
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.GET_ACCOUNTS"/>
+    <uses-permission android:name="android.permission.USE_CREDENTIALS"/>
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="App Kelompok 1"
+        android:theme="@style/Theme.AppKelompok1">
+
+        <!-- StartActivity sebagai tampilan awal dengan animasi -->
+        <activity
+            android:name=".StartActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+        </activity>
+
+        <!-- MainActivity (Halaman untuk Login sebagai Admin atau Siswa) -->
+        <activity android:name=".MainActivity"
+            android:exported="true"/>
+
+        <!-- Login Admin -->
+        <activity android:name=".LoginAdminActivity"
+            android:exported="false"/>
+
+        <!-- Dashboard Admin -->
+        <activity android:name=".AdminDashboardActivity"
+            android:exported="false"/>
+
+        <!-- Login Siswa -->
+        <activity android:name=".LoginSiswaActivity"
+            android:exported="false"/>
+
+        <!-- Dashboard Siswa -->
+        <activity android:name=".SiswaDashboardActivity"
+            android:exported="false"/>
+
+        <!-- Sign Up -->
+        <activity android:name=".SignUpActivity"
+            android:exported="false"/>
+
+        <!-- Form Pendaftaran -->
+        <activity android:name=".FormPendaftaranActivity"
+            android:exported="false"/>
+
+        <!-- Lupa Password -->
+        <activity android:name=".LupaPasswordActivity"
+            android:exported="false"/>
+
+    </application>
+</manifest>
