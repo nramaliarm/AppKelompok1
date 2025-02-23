@@ -1,0 +1,198 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/gradien_background">
+
+    <!-- ScrollView untuk konten utama -->
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:fillViewport="true"
+        app:layout_constraintBottom_toTopOf="@id/bottom_navigation"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <!-- Header -->
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/tv_greeting"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:fontFamily="sans-serif-medium"
+                    android:text="Halo, Syahril Ramadhan!"
+                    android:textColor="@color/black"
+                    android:textSize="14sp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"/>
+
+                <ImageView
+                    android:id="@+id/iv_profile"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_marginEnd="8dp"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/ic_profile"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"/>
+
+                <TextView
+                    android:id="@+id/tv_school_name"
+                    android:layout_width="192dp"
+                    android:layout_height="43dp"
+                    android:layout_marginTop="24dp"
+                    android:fontFamily="sans-serif-black"
+                    android:gravity="left"
+                    android:text="Sekolah Islam Terpadu ALMAWAR Kolaka"
+                    android:textAlignment="textStart"
+                    android:textColor="@color/black"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/tv_greeting"/>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <!-- Content -->
+            <ImageView
+                android:id="@+id/imageView5"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:adjustViewBounds="true"
+                app:srcCompat="@drawable/sekolah"/>
+
+            <TextView
+                android:id="@+id/tv_sejarah"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Kolaka merupakan salah satu daerah pesisir pantai yang berbatasan langsung dengan pegunungan. Kolaka juga dikenal sebagai daerah pegunungan yang memberikan keindahan panorama dan memiliki sumber alam yang melimpah. Kolaka terletak di bagian barat Provinsi Sulawesi Tenggara dengan luas wilayah sekitar 3.283,64 km² serta terbagi menjadi 12 kecamatan 100 desa dan 35 kelurahan dengan jumlah penduduk sebanyak 228.970 jiwa. Kabupaten ini merupakan salah satu wilayah terbesar di provinsi Sulawesi Tenggara yang memiliki kekayaan alam yang sangat potensial berupa hasil pertanian,  pertambangan dan juga perikanan. Hasil pertanian dengan komoditi cengkeh, kakao, padi, merica, nilam, kelapa, jagung dan durian yang melimpah. Potensi hasil tambang berupa emas, nikel, marmer, onix, kuarsa dan granit hitam hasil alam menjadi keunggulan Provinsi Sulawesi Tenggara khususnya Kabupaten Koalaka. Hasil perikanan dengan komoditi tambak, kolam ikan dan rumput laut yang kini banyak dikembangan masyarakat Kabupaten Kolaka.
+
+Selain kekayaan alam, Kabupaten Kolaka juga memiliki potensi pariwisata karena keindahan alamnya, kebudayaan serta kesenian daerah. Kolaka mempunyai banyak tempat peristirahatan dan tempat wisata yang mempunyai keindahan yang masih asli dan belum terjamak oleh keadaan zaman, misalnya pantai Tamborasi yang menjadi ikon pariwisata Kabupaten Kolaka degan keindahan alam serta sungai terpendek di dunia yang berbatasan langsung dengan pantai. Kabupaten Kolaka juga memiliki keindahan pegunungan yang asri seperti Puncak Lima Jari dan Pulau Indah Lambasina. Kebudayaan dan kesenian daerah Kabupaten Kolaka juga tidak kalah menarik bagi para wisatawan seperti upacara adat dan tari-tarian Mekongga menjadi salah satu daya tarik pariwisata yang melengkapi keragaman potensi pariwisata yang ada di Kolaka. Keberhasilan para pebisnis pada bidang industri dan perdagangan juga merupakan potensi yang tengah berkembangkan di Kabupaten Kolaka. Kolaka memiliki beberapa industri kecil pada bidang pertanian yang tersebar di berbagai tempat dengan aneka macam produk komoditas yang variatif, seperti bibit dan pupuk. Kabupaten ini juga memiliki usaha kecil menengah yang tersebar di berbagai kecamatan dan desa yang menjadi salah satu tulang punggung perekonomian Kabupaten Kolaka. Peningkatan kualitas sumber daya manusia merupakan kunci utama keberhasilan pengelolaan dan pengembangan semua potensi daerah yang dimiliki oleh Kabupaten Kolaka yang sudah dijabarkan di atas. Pengembangan sumber daya manusia adalah bagian dari proses dan tujuan dalam pembangunan nasional Indonesia. Sebab itu, pikiran-pikiran pembangunan yang berkembang dewasa ini sangat dipengaruhi oleh kesadaran yang makin kuat akan tidak terhindarnya keikutsertaan bangsa Indonesia dalam proses global yang sedang berlangsung itu. Diharapkan proses ini membawa keuntungan dan mendorong proses pembangunan nasional.
+
+Pada waktu yang bersamaan, bangsa Indonesia juga menghadapi tantangan untuk mengejar ketertinggalan dari bangsa-bangsa lain yang telah lebih dahulu maju. Maka sebab itu pembangunan bangsa yang maju dan mandiri, untuk mewujudkan kesejahteraan, mengharuskan   dikembangkannya konsep pembangunan yang bertumpu pada manusia dan masyrakatnya. Atas dasar itu untuk mencapai tujuan pembangunan yang demikian, titik berat pembangunan diletakkan pada bidang ekonomi dengan kualitas sumber daya manusia.
+
+Sejalan dengan kebijakan Kementerian Pendidikan dan Kebudayaan melalui Direktorat Jenderal Pendidikan Tinggi untuk peningkatan kualitas sumber daya manusia, maka pemerintah Kabupaten Kolaka berharap penuh kepada seluruh aspek masyarakat untuk ikut serta dalam pengembangan sumber daya manusia yang unggul. Pemerintah sangat mengapresiasi pada setiap kalangan yang ingin ikut serta dalam pembangunan sumber daya manusia Kabupaten Kolaka.
+
+Pendiri Yayasan Al Mawaddah Warahmah Kolaka merupakan salah satu tokoh yang tertarik untuk ikut serta dalam mengembangkan potensi sumber daya manusia Kabupaten Kolaka. Yayasan Pondok Pesantren Al Mawaddah Warahmah Kolaka berdiri berdasarkan akta notaris nomor 48 tahun 2001 yang telah membangun pondasi kelembangan pendidikan secara komfrehensif dengan mendirikan satuan pendidikan jenjang MA, MTs, MI, RA pada ruang lingkup Kementerian Agama selain itu juga telah membangun lembaga pendidikan yang lengkap dibawah naungan kementerian Pendidikan dan Kebudayaan yakni SMAIT, SMPIT, SDIT, TKIT. Tahun 2005 yayasan ini juga membentuk tim penyusun pendirian perguruan tinggi dengan nama Sekolah Tinggi Agama Islam (STAI)."
+                android:textColor="@color/black"
+                android:textSize="14sp"
+                android:lineSpacingExtra="8dp"
+                android:fontFamily="sans-serif"
+                android:justificationMode="inter_word"
+                android:background="@drawable/white_background"/>
+
+        </LinearLayout>
+    </ScrollView>
+
+    <!-- Bottom Navigation Manual with 4 items -->
+    <LinearLayout
+        android:id="@+id/bottom_navigation"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:background="@android:color/white"
+        android:elevation="10dp"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+        <!-- Home -->
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:clickable="true"
+            android:onClick="navigateToHome">
+            <ImageView
+                android:id="@+id/icon_home"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:src="@drawable/ic_home" />
+            <TextView
+                android:id="@+id/text_home"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Home" />
+        </LinearLayout>
+
+        <!-- School -->
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:clickable="true"
+            android:onClick="navigateToSchool">
+            <ImageView
+                android:id="@+id/icon_school"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:src="@drawable/ic_school" />
+            <TextView
+                android:id="@+id/text_school"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="School" />
+        </LinearLayout>
+
+        <!-- Formulir -->
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:clickable="true"
+            android:onClick="navigateToFormulir">
+            <ImageView
+                android:id="@+id/icon_formulir"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:src="@drawable/ic_formulir" />
+            <TextView
+                android:id="@+id/text_formulir"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Formulir" />
+        </LinearLayout>
+
+        <!-- Profile -->
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:clickable="true"
+            android:onClick="navigateToProfile">
+            <ImageView
+                android:id="@+id/icon_profile"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:src="@drawable/user" />
+            <TextView
+                android:id="@+id/text_profile"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Profile" />
+        </LinearLayout>
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

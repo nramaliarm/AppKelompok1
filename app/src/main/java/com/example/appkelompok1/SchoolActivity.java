@@ -4,9 +4,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
-import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
-import com.google.android.material.bottomnavigation.BottomNavigationView;
 
 public class SchoolActivity extends AppCompatActivity {
 
@@ -15,51 +13,59 @@ public class SchoolActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_school);
 
-        // Inisialisasi Bottom Navigation
-        BottomNavigationView bottomNavigationView = findViewById(R.id.bottom_navigation);
-
-        // Set item yang dipilih
-        bottomNavigationView.setSelectedItemId(R.id.nav_school);
-
-        // Listener untuk navigasi antar halaman
-        bottomNavigationView.setOnNavigationItemSelectedListener(item -> {
-            switch (item.getItemId()) {
-                case R.id.nav_home:
-                    startActivity(new Intent(getApplicationContext(), SiswaDashboardActivity.class));
-                    overridePendingTransition(0, 0);
-                    return true;
-
-                case R.id.nav_school:
-                    startActivity(new Intent(getApplicationContext(), SchoolActivity.class));
-                    overridePendingTransition(0, 0);
-                    return true;
-
-                case R.id.nav_profile:
-                    startActivity(new Intent(getApplicationContext(), ProfileSiswaActivity.class));
-                    overridePendingTransition(0, 0);
-                    return true;
+        // Menambahkan listener untuk tombol Sejarah
+        Button btnSejarah = findViewById(R.id.btn_sejarah);
+        btnSejarah.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                // Pindah ke halaman Sejarah
+                Intent intent = new Intent(SchoolActivity.this, SejarahActivity.class);
+                startActivity(intent);
             }
-            return false;
         });
 
-        // Inisialisasi tombol menu profil sekolah
-        Button btnSejarah = findViewById(R.id.btn_sejarah);
+        // Menambahkan listener untuk tombol Tujuan
         Button btnTujuan = findViewById(R.id.btn_tujuan);
+        btnTujuan.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                // Pindah ke halaman Tujuan
+                Intent intent = new Intent(SchoolActivity.this, TujuanActivity.class);
+                startActivity(intent);
+            }
+        });
+
+        // Menambahkan listener untuk tombol Visi Misi
         Button btnVisiMisi = findViewById(R.id.btn_visi_misi);
-        Button btnSarana = findViewById(R.id.btn_sarana);
-        Button btnEkskul = findViewById(R.id.btn_ekskul);
+        btnVisiMisi.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                // Pindah ke halaman Visi Misi
+                Intent intent = new Intent(SchoolActivity.this, VisiMisiActivity.class);
+                startActivity(intent);
+            }
+        });
 
-        // Set OnClickListener untuk berpindah ke aktivitas yang sesuai
-        btnSejarah.setOnClickListener(v -> openDetailPage(SejarahActivity.class));
-        btnTujuan.setOnClickListener(v -> openDetailPage(TujuanActivity.class));
-        btnVisiMisi.setOnClickListener(v -> openDetailPage(VisiMisiActivity.class));
-        btnSarana.setOnClickListener(v -> openDetailPage(SaranaActivity.class));
-        btnEkskul.setOnClickListener(v -> openDetailPage(EkstrakurikulerActivity.class));
-    }
+        // Menambahkan listener untuk tombol Sarana dan Prasarana
+        Button btnSaranaPrasarana = findViewById(R.id.btn_sarana);
+        btnSaranaPrasarana.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                // Pindah ke halaman Sarana dan Prasarana
+                Intent intent = new Intent(SchoolActivity.this, SaranaActivity.class);
+                startActivity(intent);
+            }
+        });
 
-    // Fungsi untuk membuka halaman baru
-    private void openDetailPage(Class<?> activityClass) {
-        Intent intent = new Intent(SchoolActivity.this, activityClass);
-        startActivity(intent);
+        // Menambahkan listener untuk tombol Ekstrakurikuler
+        Button btnEkstrakurikuler = findViewById(R.id.btn_ekskul);
+        btnEkstrakurikuler.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                // Pindah ke halaman Ekstrakurikuler
+                Intent intent = new Intent(SchoolActivity.this, EkstrakurikulerActivity.class);
+                startActivity(intent);
+            }
+        });
     }
 }
