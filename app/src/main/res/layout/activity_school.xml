@@ -104,7 +104,7 @@
                 android:text="Profile Sekolah"
                 android:textSize="18sp"
                 android:textStyle="bold"
-                android:gravity="center"
+                android:gravity="left"
                 android:textColor="@color/black" />
 
             <Button
@@ -165,13 +165,19 @@
     </LinearLayout>
 </ScrollView>
 
-    <!-- BOTTOM NAVIGATION BAR -->
-        <com.google.android.material.bottomnavigation.BottomNavigationView
+    <!-- Fragment container untuk fragment yang berubah -->
+    <FrameLayout
+        android:id="@+id/fragment_container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_constraintTop_toBottomOf="@id/bottom_navigation"
+        app:layout_constraintBottom_toTopOf="@id/bottom_navigation"/>
+
+    <!-- Bottom Navigation -->
+    <com.google.android.material.bottomnavigation.BottomNavigationView
         android:id="@+id/bottom_navigation"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="@android:color/white"
-        android:elevation="10dp"
         app:menu="@menu/bottom_nav_menu"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"

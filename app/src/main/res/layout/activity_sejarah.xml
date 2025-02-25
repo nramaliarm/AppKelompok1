@@ -10,7 +10,7 @@
     <!-- ScrollView untuk konten utama -->
     <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="0dp"
+        android:layout_height="wrap_content"
         android:fillViewport="true"
         app:layout_constraintBottom_toTopOf="@id/bottom_navigation"
         app:layout_constraintTop_toTopOf="parent">
@@ -98,101 +98,24 @@ Pendiri Yayasan Al Mawaddah Warahmah Kolaka merupakan salah satu tokoh yang tert
 
         </LinearLayout>
     </ScrollView>
+    <FrameLayout
+        android:id="@+id/fragment_container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_constraintTop_toBottomOf="@id/bottom_navigation"
+        app:layout_constraintBottom_toTopOf="@id/bottom_navigation"/>
 
-    <!-- Bottom Navigation Manual with 4 items -->
-    <LinearLayout
+    <!-- Bottom Navigation -->
+    <com.google.android.material.bottomnavigation.BottomNavigationView
         android:id="@+id/bottom_navigation"
         android:layout_width="match_parent"
-        android:layout_height="60dp"
-        android:orientation="horizontal"
-        android:gravity="center"
-        android:background="@android:color/white"
-        android:elevation="10dp"
-        app:layout_constraintBottom_toBottomOf="parent">
-
-        <!-- Home -->
-        <LinearLayout
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:orientation="vertical"
-            android:gravity="center"
-            android:clickable="true"
-            android:onClick="navigateToHome">
-            <ImageView
-                android:id="@+id/icon_home"
-                android:layout_width="24dp"
-                android:layout_height="24dp"
-                android:src="@drawable/ic_home" />
-            <TextView
-                android:id="@+id/text_home"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Home" />
-        </LinearLayout>
-
-        <!-- School -->
-        <LinearLayout
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:orientation="vertical"
-            android:gravity="center"
-            android:clickable="true"
-            android:onClick="navigateToSchool">
-            <ImageView
-                android:id="@+id/icon_school"
-                android:layout_width="24dp"
-                android:layout_height="24dp"
-                android:src="@drawable/ic_school" />
-            <TextView
-                android:id="@+id/text_school"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="School" />
-        </LinearLayout>
-
-        <!-- Formulir -->
-        <LinearLayout
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:orientation="vertical"
-            android:gravity="center"
-            android:clickable="true"
-            android:onClick="navigateToFormulir">
-            <ImageView
-                android:id="@+id/icon_formulir"
-                android:layout_width="24dp"
-                android:layout_height="24dp"
-                android:src="@drawable/ic_formulir" />
-            <TextView
-                android:id="@+id/text_formulir"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Formulir" />
-        </LinearLayout>
-
-        <!-- Profile -->
-        <LinearLayout
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:orientation="vertical"
-            android:gravity="center"
-            android:clickable="true"
-            android:onClick="navigateToProfile">
-            <ImageView
-                android:id="@+id/icon_profile"
-                android:layout_width="24dp"
-                android:layout_height="24dp"
-                android:src="@drawable/user" />
-            <TextView
-                android:id="@+id/text_profile"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Profile" />
-        </LinearLayout>
-    </LinearLayout>
-
+        android:layout_height="wrap_content"
+        app:menu="@menu/bottom_nav_menu"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
 </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+
