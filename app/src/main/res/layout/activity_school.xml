@@ -114,6 +114,7 @@
                 android:layout_marginTop="8dp"
                 android:backgroundTint="@color/gray"
                 android:text="Sejarah"
+                android:clickable="true"
                 android:textColor="@color/black"
                 android:drawableEnd="@drawable/ic_arrow_right"
                 android:padding="10dp"/>
